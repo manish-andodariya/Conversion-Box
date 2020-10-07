@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f44336">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <title>Weight Convertor</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 20px;
+            background-color: #ef5350;
+            font-family: 'Nunito';
+            padding-bottom: 100px;
+        }
+        
+        .card {
+            padding: 10px;
+        }
+        
+        .imglink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .imglink table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            border: none;
+            background-color: #e57373;
+        }
+        
+        .imglink table tr td {
+            background-color: #ef5350;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-4" style="color: #ffffff;">Conversion Box</h1>
+            </div>
+        </div>
+        <div class="imglink">
+            <table cellpadding="15">
+                <tr>
+                    <td>
+                        <a href="length.html" style="color: #1e272e;"><i class="material-icons" style="font-size: 100px;">straighten</i></a> <span style="display: flex; justify-content: center; ">Length</span>
+                    </td>
+                    <td>
+                        <a href="mass.html" style="color: #1e272e;"><i class="material-icons" style="font-size: 100px;">score</i></a><span style="display: flex; justify-content: center;">Weight</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="temprature.html" style="color: #1e272e;"><i class="material-icons" style="font-size: 100px;">ac_unit</i></a><span style="display: flex; justify-content: center;">temprature</span>
+                    </td>
+                    <td>
+                        <a href="area.html" style="color: #1e272e;"><i class="material-icons" style="font-size: 100px;">square_foot</i></a><span style="display: flex; justify-content: center;">Area</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer">
+        Devloped by Manish Prajapati
+    </div>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>

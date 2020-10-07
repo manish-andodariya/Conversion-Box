@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00BCD4">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weight Convertor</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 20px;
+            background-color: #26C6DA;
+            font-family: 'Nunito';
+        }
+        
+        .card {
+            padding: 10px;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #070707;
+            background-color: #00BCD4;
+            background-clip: padding-box;
+            border: 1px solid #26C6DA;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        
+        .form-control::-ms-expand {
+            background-color: transparent;
+            border: 0;
+        }
+        
+        .form-control:focus {
+            color: #000000;
+            background-color: #00ACC1;
+            border: 2px solid #4DD0E1;
+            outline: 0;
+        }
+        
+        .form-control::-webkit-input-placeholder {
+            color: #111111;
+            opacity: 1;
+        }
+        
+        .form-control::-moz-placeholder {
+            color: #111111;
+            opacity: 1;
+        }
+        
+        .form-control:-ms-input-placeholder {
+            color: #111111;
+            opacity: 1;
+        }
+        
+        .form-control::-ms-input-placeholder {
+            color: #111111;
+            opacity: 1;
+        }
+        
+        .form-control::placeholder {
+            color: #111111;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="color: #1e272e;"><i class="material-icons">arrow_back</i></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-5 text-center mb-4" style="color: #ffffff;">Area Convertor</h1>
+                <form>
+                    <div class="form-group mb-1">
+                        <input id="inputl" type="number" class="form-control form-control-lg-" placeholder="Enter in m².">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card mb-1 text-white" style="background-color: #E53935;">
+                        <div class="card-block">
+                            <h4>Square Kilometer km²:</h4>
+                            <div id="skout"></div>
+                        </div>
+                    </div>
+                    <div class="card mb-1 text-white" style="background-color: #FB8C00;">
+                        <div class="card-block">
+                            <h4>Square Centimeter cm²:</h4>
+                            <div id="scout"></div>
+                        </div>
+                    </div>
+                    <div class="card mb-1 text-white" style="background-color: #3949AB;">
+                        <div class="card-block">
+                            <h4>Square meter m²</h4>
+                            <div id="smout"></div>
+                        </div>
+                    </div>
+                    <div class="card mb-1 text-white" style="background-color: #7CB342;">
+                        <div class="card-block">
+                            <h4>Square Feet ft²:</h4>
+                            <div id="sfout"></div>
+                        </div>
+                    </div>
+                    <div class="card mb-1 text-white" style="background-color: #8E24AA;">
+                        <div class="card-block">
+                            <h4>Square Inch in²:</h4>
+                            <div id="siout"></div>
+                        </div>
+                    </div>
+                    <div class="card mb-1 text-white" style="background-color: #FDD835;">
+                        <div class="card-block">
+                            <h4>Acre ac:</h4>
+                            <div id="acout"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('output').style.visibility = 'hidden';
+        document.getElementById('inputl').addEventListener('input', function(e) {
+            let inp = e.target.value;
+            console.log(inp);
+            document.getElementById('output').style.visibility = 'visible';
+            document.getElementById('skout').innerHTML = inp * 0.000001;
+            document.getElementById('scout').innerHTML = inp * 10000;
+            document.getElementById('smout').innerHTML = inp * 1;
+            document.getElementById('sfout').innerHTML = inp * 10.764;
+            document.getElementById('siout').innerHTML = inp * 1550.0031;
+            document.getElementById('acout').innerHTML = inp / 4047;
+            if (inp === "") {
+                document.getElementById('output').style.visibility = 'hidden';
+            }
+        })
+    </script>
+</body>
+
+</html>
